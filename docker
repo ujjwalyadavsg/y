@@ -1,0 +1,25 @@
+
+console.log("hello")
+
+---------------------------------------------------------------------------
+
+FROM node:alpine
+COPY . /app
+WORKDIR /app
+CMD node app.js
+
+----------------------------------------------------------------------------
+
+docker build -t (foldername) .
+docker login
+docker tag (foldername):latest username/image
+docker push username/image
+docker run (foldername)
+
+
+--------------------------------------------------------------------
+[docker playground]
+
+docker login
+docker pull username/image
+docker run username/image
